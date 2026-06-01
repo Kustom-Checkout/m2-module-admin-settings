@@ -64,7 +64,7 @@ class ExternalmethodsTest extends TestCase
     protected function setUp(): void
     {
         $mockFactory           = new MockFactory($this);
-        $objectFactory         = new TestObjectFactory($mockFactory);
+        $objectFactory         = new TestObjectFactory('');
         $this->subject         = $objectFactory->create(Externalmethods::class);
         $this->dependencyMocks = $objectFactory->getDependencyMocks();
     }

@@ -62,7 +62,7 @@ class MerchantCheckboxTest extends TestCase
     protected function setUp(): void
     {
         $mockFactory           = new MockFactory($this);
-        $objectFactory         = new TestObjectFactory($mockFactory);
+        $objectFactory         = new TestObjectFactory('');
         $this->model           = $objectFactory->create(MerchantCheckbox::class);
         $this->dependencyMocks = $objectFactory->getDependencyMocks();
     }

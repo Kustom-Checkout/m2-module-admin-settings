@@ -188,7 +188,7 @@ class MessageTest extends TestCase
     protected function setUp(): void
     {
         $mockFactory = new MockFactory($this);
-        $objectFactory = new TestObjectFactory($mockFactory);
+        $objectFactory = new TestObjectFactory('');
 
         // Main class being tested
         $this->model = $objectFactory->create(Message::class);
