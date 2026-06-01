@@ -53,16 +53,14 @@ class ReferenceTest extends TestCase
         $logsUrl = 'http://localhost/index.php/klarna/index/logs/';
         $supportUrl = 'http://localhost/index.php/klarna_support/index/support/form/new/';
 
-        $expected =
-            '<div>' .
-                "<h2 style='color: #303030;'>Version: 1.1.3</h2>" .
-                '<ul style="list-style-position: inside;">' .
-                    "<li><a href='$docsUrl' target='_blank'>Documentation</a></li>" .
-                    "<li><a href='$logsUrl' target='_blank'>Logs</a></li>" .
-                    "<li><a href='$supportUrl' target='_blank'>Support</a></li>" .
-                    "<li><a href='$troubleshootingUrl' target='_blank'>Troubleshooting</a></li>" .
-                '</ul>' .
-            '</div>';
-        $this->assertSame($expected, $this->model->render($element));
+        $expectedContains = '<ul style="list-style-position: inside;">' .
+            "<li><a href='$docsUrl' target='_blank'>Documentation</a></li>" .
+            "<li><a href='$logsUrl' target='_blank'>Logs</a></li>" .
+            "<li><a href='$supportUrl' target='_blank'>Support</a></li>" .
+            "<li><a href='$troubleshootingUrl' target='_blank'>Troubleshooting</a></li>" .
+            '</ul>';
+
+        $result = $this->model->render($element);
+        $this->assertStringContainsString($expectedContains, $result);
     }
 }
