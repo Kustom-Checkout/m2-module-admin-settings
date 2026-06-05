@@ -16,7 +16,7 @@
                 <field id="reference" type="note" translate="label" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="0">
                     <frontend_model>Klarna\AdminSettings\Model\System\Config\General\Reference</frontend_model>
                 </field>
-                <comment><![CDATA[<div class='klarna-payment-logo'></div><div class='klarna-payment-text'>The leading checkout in the Nordics, built for higher conversion and returning shoppers. Easy to integrate, supports Klarna and all popular payment methods, and includes built-in shipping.</div>]]></comment>
+                <comment><![CDATA[<div class='klarna-payment-logo'></div><div class='klarna-payment-text'>The leading checkout in the Nordics, built for higher conversion and returning shoppers. Easy to integrate, supports Kustom and all popular payment methods, and includes built-in shipping.</div>]]></comment>
                 <fieldset_css>complex klarna-section</fieldset_css>
                 <frontend_model>Klarna\AdminSettings\Block\Adminhtml\System\Config\General\Fieldset\Payment</frontend_model>
                 <group id="api" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0"
@@ -155,7 +155,7 @@
                 <!-- Klarna Payments (KP) is DISABLED. This feature is no longer supported. -->
                 <group id="klarna_kp_required" translate="label" sortOrder="20" showInDefault="0"
                        showInWebsite="0" showInStore="0">
-                    <label>Klarna Payments [DEPRECATED - KUSTOM-88]</label>
+                    <label>Kustom Payments [DEPRECATED]</label>
                     <comment>Give your customers the ability to pay in flexible ways such as Buy now, Pay Later, Invoicing, Instalments and Financing.</comment>
                     <frontend_model>Magento\Config\Block\System\Config\Form\Fieldset</frontend_model>
                     <field id="active" translate="label comment" type="select" showInDefault="1" showInWebsite="1"
@@ -179,14 +179,14 @@
                 <!-- On-Site Messaging (OSM) is DISABLED. This feature is no longer supported. -->
                 <group id="osm" translate="label" sortOrder="30" showInDefault="0"
                        showInWebsite="0" showInStore="0">
-                    <label>On-Site Messaging [DEPRECATED - KUSTOM-88]</label>
+                    <label>On-Site Messaging [DEPRECATED]</label>
                     <comment>Add personalized messaging throughout the shopper journey for higher conversion rates and increased spend.</comment>
                     <field id="enabled" sortOrder="10" translate="label" type="select" showInDefault="1"
                            showInWebsite="1"
                            showInStore="0">
                         <label>Enable</label>
                         <comment><![CDATA[If it does not show up please ensure that the domain is whitelisted. For more information please click <a target="_blank" href="https://docs.klarna.com/on-site-messaging/integrate-on-site-messaging/integrate-using-the-web-sdk/#step-1-activation-3-allowlisting-your-domain">here</a>]]></comment>
-                        <tooltip>The activation of On-site messaging at checkout may vary based on your Klarna payment integration method.</tooltip>
+                        <tooltip>The activation of On-site messaging at checkout may vary based on your Kustom payment integration method.</tooltip>
                         <config_path>klarna/osm/enabled</config_path>
                         <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     </field>
@@ -222,7 +222,7 @@
                 </group>
                 <!-- Express Checkout (KEC) is DISABLED. This feature is no longer supported. -->
                 <group id="kec" translate="label" sortOrder="30" showInDefault="0" showInWebsite="0" showInStore="0">
-                    <label>Express Checkout  [DEPRECATED - KUSTOM-88]</label>
+                    <label>Express Checkout  [DEPRECATED]</label>
                     <comment>Offer a 6x faster check-out process that will lower the threshold for shoppers to complete a purchase.</comment>
                     <field id="enabled" sortOrder="0" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
                         <label>Enable</label>
@@ -254,10 +254,10 @@
                         </field>
                     </group>
                 </group>
-                <!-- Sign in with Klarna (SIWK) is DISABLED. This feature is no longer supported and will be removed in the next major release. -->
+                <!-- Sign in with Kustom (SIWK) is DISABLED. This feature is no longer supported and will be removed in the next major release. -->
                 <group id="siwk" translate="label" sortOrder="40" showInDefault="0"
                        showInWebsite="0" showInStore="0">
-                    <label>Sign in with Klarna [DEPRECATED - KUSTOM-52]</label>
+                    <label>Sign in with Kustom [DEPRECATED]</label>
                     <comment>Reduce fraud rates through verified identities and consented shopper data, improve personalized shopping experiences.</comment>
                     <field id="enabled" sortOrder="0" translate="label" type="select" showInDefault="1"
                            showInWebsite="1"
@@ -265,18 +265,18 @@
                         <label>Enable</label>
                         <config_path>klarna/siwk/enabled</config_path>
                         <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                        <comment><![CDATA[<div>This URL <b>"https://{url-of-your-shop}/siwk/klarna/callback"</b> must be set as the "Redirect URL" in the Klarna Merchant Portal → the Sign in with Klarna section. Also ensure to add the shop domain in the "Allowed origins" section, under Payment settings → Client identifier section.</div>]]></comment>
+                        <comment><![CDATA[<div>This URL <b>"https://{url-of-your-shop}/siwk/klarna/callback"</b> must be set as the "Redirect URL" in the Kustom Merchant Portal → the Sign in with Kustom section. Also ensure to add the shop domain in the "Allowed origins" section, under Payment settings → Client identifier section.</div>]]></comment>
                     </field>
                     <field id="scopes" translate="label" type="checkbox" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="0">
-                        <label>Select the scope for sign-in with Klarna</label>
+                        <label>Select the scope for sign-in with Kustom</label>
                         <config_path>klarna/siwk/scope</config_path>
                         <frontend_model>Klarna\AdminSettings\Block\Adminhtml\System\Config\Siwk\Scope</frontend_model>
-                        <comment><![CDATA[Default scopes are always used but you can also select additional scopes. The scopes must be also enabled for your account in the Klarna Merchant Portal. For more information see <a href="https://docs.klarna.com/conversion-boosters/sign-in-with-klarna/integrate-sign-in-with-klarna/web-sdk-integration/#scopes-and-claims" target="_blank">here</a>]]></comment>
+                        <comment><![CDATA[Default scopes are always used but you can also select additional scopes. The scopes must be also enabled for your account in the Kustom Merchant Portal. For more information see <a href="https://docs.klarna.com/conversion-boosters/sign-in-with-klarna/integrate-sign-in-with-klarna/web-sdk-integration/#scopes-and-claims" target="_blank">here</a>]]></comment>
                     </field>
                     <group id="theme_button_shape_and_placements" translate="label" sortOrder="10" showInDefault="1"
                            showInWebsite="1" showInStore="0">
                         <label>Theme, button shape and placements</label>
-                        <comment>Tailor the sign-in with Klarna button to fit your brand by adjusting the button theme, shape and selecting placements.</comment>
+                        <comment>Tailor the sign-in with Kustom button to fit your brand by adjusting the button theme, shape and selecting placements.</comment>
                         <field id="button_theme" sortOrder="0" translate="label" type="select" showInDefault="1"
                                showInWebsite="1"
                                showInStore="0">
@@ -327,7 +327,7 @@
                                showInDefault="1" showInWebsite="1" showInStore="0">
                             <label>Shipping Countries</label>
                             <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
-                            <comment>Supported shipping countries for Klarna.</comment>
+                            <comment>Supported shipping countries for Kustom.</comment>
                             <config_path>payment/klarna_kco/shipping_countries</config_path>
                         </field>
                         <field id="shipping_and_billing_countries_same" sortOrder="3" translate="label" type="select" showInDefault="1"
@@ -341,7 +341,7 @@
                                showInDefault="1" showInWebsite="1" showInStore="0">
                             <label>Billing Countries</label>
                             <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
-                            <comment>Supported billing countries for Klarna.</comment>
+                            <comment>Supported billing countries for Kustom.</comment>
                             <config_path>payment/klarna_kco/billing_countries</config_path>
                             <depends>
                                 <field id="shipping_and_billing_countries_same">0</field>
@@ -349,11 +349,11 @@
                         </field>
                         <field id="disable_customer_group" translate="label comment" type="multiselect" sortOrder="5"
                                showInDefault="1" showInWebsite="1" showInStore="0">
-                            <label>Disable Klarna for specific customer groups</label>
+                            <label>Disable Kustom for specific customer groups</label>
                             <source_model>Klarna\AdminSettings\Model\System\Config\Kco\Source\Customer\Group</source_model>
                             <backend_model>Klarna\AdminSettings\Model\System\Config\Kco\Backend\Multiselect</backend_model>
                             <can_be_empty>1</can_be_empty>
-                            <comment>Selected groups will see standard checkout instead of Klarna checkout.</comment>
+                            <comment>Selected groups will see standard checkout instead of Kustom checkout.</comment>
                             <config_path>payment/klarna_kco/disable_customer_group</config_path>
                         </field>
                         <field id="external_payment_methods" translate="label comment" type="multiselect" sortOrder="6"
@@ -362,7 +362,7 @@
                             <source_model>Klarna\AdminSettings\Model\System\Config\Kco\Source\Externalmethods</source_model>
                             <backend_model>Klarna\AdminSettings\Model\System\Config\Kco\Backend\Multiselect</backend_model>
                             <can_be_empty>1</can_be_empty>
-                            <comment>Additional payment methods not processed through Klarna, e.g. PayPal, that can be included on the Klarna checkout page. Make sure to enable the specific payment method first for it to show up in the list</comment>
+                            <comment>Additional payment methods not processed through Kustom, e.g. PayPal, that can be included on the Kustom checkout page. Make sure to enable the specific payment method first for it to show up in the list</comment>
                             <config_path>payment/klarna_kco/external_payment_methods</config_path>
                         </field>
                         <field id="guest_checkout" translate="label comment" type="select" sortOrder="7"
@@ -392,7 +392,7 @@
                         </field>
                         <field id="auto_focus" translate="label comment" type="select" sortOrder="10" showInDefault="1"
                                showInWebsite="1" showInStore="0">
-                            <label>Auto focus Klarna Checkout</label>
+                            <label>Auto focus Kustom Checkout</label>
                             <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
                             <config_path>checkout/klarna_kco/auto_focus</config_path>
                         </field>
@@ -406,14 +406,14 @@
                                showInWebsite="1" showInStore="0">
                             <label>Pre-fill Customer Details</label>
                             <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
-                            <comment>Pre-fill Klarna Checkout with stored customer data.</comment>
+                            <comment>Pre-fill Kustom Checkout with stored customer data.</comment>
                             <config_path>checkout/klarna_kco/merchant_prefill</config_path>
                         </field>
                         <field id="prefill_notice" translate="label comment" type="select" sortOrder="10"
                                showInDefault="1" showInWebsite="1" showInStore="0">
                             <label>Customer pre-fill notice</label>
                             <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
-                            <comment>Display a pre-fill notice to registered customer before submitting details to Klarna. The customer must accept the notice to have their account details shared with Klarna.</comment>
+                            <comment>Display a pre-fill notice to registered customer before submitting details to Kustom. The customer must accept the notice to have their account details shared with Kustom.</comment>
                             <depends>
                                 <field id="merchant_prefill">1</field>
                             </depends>
@@ -465,7 +465,7 @@
                                showInDefault="1" showInWebsite="1" showInStore="0">
                             <label>Shipping methods in iframe</label>
                             <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                            <comment>Display shipping methods in Klarna iframe. (This is ignored and forced to 'no' in some markets)</comment>
+                            <comment>Display shipping methods in Kustom iframe. (This is ignored and forced to 'no' in some markets)</comment>
                             <config_path>checkout/klarna_kco/shipping_in_iframe</config_path>
                         </field>
                         <field id="packstation_enabled" translate="label comment" type="select" sortOrder="10"
@@ -545,7 +545,7 @@
                             <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
                             <frontend_model>Klarna\AdminSettings\Block\Adminhtml\System\Config\Kco\Customcheckboxes</frontend_model>
                             <comment>
-                                <![CDATA[Add multiple additional custom checkboxes to Klarna Checkout.]]>
+                                <![CDATA[Add multiple additional custom checkboxes to Kustom Checkout.]]>
                             </comment>
                             <config_path>checkout/klarna_kco/custom_checkboxes</config_path>
                         </field>
@@ -602,12 +602,12 @@
                     </group>
                     <group id="klarna_kss_required" translate="label" sortOrder="100" showInDefault="1"
                            showInWebsite="1" showInStore="0">
-                        <label>Klarna Shipping Assistant</label>
+                        <label>Kustom Shipping Assistant</label>
                         <frontend_model>Magento\Config\Block\System\Config\Form\Fieldset</frontend_model>
                         <field id="kss_enabled" translate="label" type="select" sortOrder="10" showInDefault="1"
                                showInWebsite="1" showInStore="0">
                             <label>Enable</label>
-                            <comment>Klarna Shipping Assistant must also be enabled in Klarna Merchant Portal.</comment>
+                            <comment>Kustom Shipping Assistant must also be enabled in Kustom Merchant Portal.</comment>
                             <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                             <config_path>payment/klarna_kss/enabled</config_path>
                         </field>
