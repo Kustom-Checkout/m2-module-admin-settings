@@ -45,7 +45,7 @@ class MessageTest extends TestCase
     {
         $actualMessage = $this->model->getMessageInvalidShippingCountries(['default']);
         $this->assertStringContainsString(
-            __('Klarna Checkout shipping country configuration warning:')->__toString(),
+            __('Kustom Checkout shipping country configuration warning:')->__toString(),
             $actualMessage
         );
         $this->assertStringContainsString(__('Store(s) affected: ') . 'default', $actualMessage);
@@ -68,7 +68,7 @@ class MessageTest extends TestCase
     {
         $actualMessage = $this->model->getMessageInvalidCustomerGroups(['default']);
         $this->assertStringContainsString(
-            __('Klarna Checkout customer group configuration warning:')->__toString(),
+            __('Kustom Checkout customer group configuration warning:')->__toString(),
             $actualMessage
         );
         $this->assertStringContainsString(__('Store(s) affected: ') . 'default', $actualMessage);

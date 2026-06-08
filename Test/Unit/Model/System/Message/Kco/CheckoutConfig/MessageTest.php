@@ -50,10 +50,10 @@ class MessageTest extends TestCase
     public function testGetMessageInvalidTitle(): void
     {
         $message = __(
-            'The title value from the Klarna Checkout and customer settings are incorrectly configured. ' .
+            'The title value from the Kustom Checkout and customer settings are incorrectly configured. ' .
             'Either they should both be required or you can leave the setting as optional under customer ' .
             'settings. However, if the setting is “required” under customer settings then it must be set to ' .
-            '“required” under Klarna Checkout as well.'
+            '“required” under Kustom Checkout as well.'
         );
         $this->dependencyMocks['url']->method('getUrl')
             ->willReturnCallback(fn($url) =>
@@ -64,7 +64,7 @@ class MessageTest extends TestCase
             );
 
         $actualMessage = $this->model->getMessageInvalidTitle(['Default']);
-        self::assertStringContainsString(__('Klarna Checkout title mandatory warning:')->__toString(), $actualMessage);
+        self::assertStringContainsString(__('Kustom Checkout title mandatory warning:')->__toString(), $actualMessage);
         self::assertStringContainsString(__('Store(s) affected: ') . 'Default', $actualMessage);
         self::assertStringContainsString(self::CHECKOUT_CONFIG_URL, $actualMessage);
         self::assertStringContainsString(self::CUSTOMER_CONFIG_URL, $actualMessage);
@@ -86,10 +86,10 @@ class MessageTest extends TestCase
     public function testGetMessageInvalidPhone(): void
     {
         $message = __(
-            'The phone value from the Klarna Checkout and customer settings are incorrectly configured. ' .
+            'The phone value from the Kustom Checkout and customer settings are incorrectly configured. ' .
             'Either they should both be required or you can leave the setting as optional under customer ' .
             'settings. However, if the setting is “required” under customer settings then it must be set to ' .
-            '“required” under Klarna Checkout as well.'
+            '“required” under Kustom Checkout as well.'
         );
         $this->dependencyMocks['url']->method('getUrl')
             ->willReturnCallback(fn($url) =>
@@ -100,7 +100,7 @@ class MessageTest extends TestCase
             );
 
         $actualMessage = $this->model->getMessageInvalidPhone(['Default']);
-        self::assertStringContainsString(__('Klarna Checkout phone mandatory warning:')->__toString(), $actualMessage);
+        self::assertStringContainsString(__('Kustom Checkout phone mandatory warning:')->__toString(), $actualMessage);
         self::assertStringContainsString(__('Store(s) affected: ') . 'Default', $actualMessage);
         self::assertStringContainsString(self::CHECKOUT_CONFIG_URL, $actualMessage);
         self::assertStringContainsString(self::CUSTOMER_CONFIG_URL, $actualMessage);
@@ -122,10 +122,10 @@ class MessageTest extends TestCase
     public function testGetMessageInvalidDateOfBirth(): void
     {
         $message = __(
-            'The date of birth value from the Klarna Checkout and customer settings are incorrectly configured. ' .
+            'The date of birth value from the Kustom Checkout and customer settings are incorrectly configured. ' .
             'Either they should both be required or you can leave the setting as optional under customer ' .
             'settings. However, if the setting is “required” under customer settings then it must be set to ' .
-            '“required” under Klarna Checkout as well.'
+            '“required” under Kustom Checkout as well.'
         );
         $this->dependencyMocks['url']->method('getUrl')
             ->willReturnCallback(fn($url) =>
@@ -137,7 +137,7 @@ class MessageTest extends TestCase
 
         $actualMessage = $this->model->getMessageInvalidDateOfBirth(['Default']);
         self::assertStringContainsString(
-            __('Klarna Checkout date of birth mandatory warning:')->__toString(),
+            __('Kustom Checkout date of birth mandatory warning:')->__toString(),
             $actualMessage
         );
         self::assertStringContainsString(__('Store(s) affected: ') . 'Default', $actualMessage);
@@ -168,7 +168,7 @@ class MessageTest extends TestCase
 
         $actualMessage = $this->model->getMessageInvalidTermsUrl(['Default']);
         self::assertStringContainsString(
-            __('Klarna Checkout terms and conditions warning:')->__toString(),
+            __('Kustom Checkout terms and conditions warning:')->__toString(),
             $actualMessage
         );
         self::assertStringContainsString(__('Store(s) affected: ') . 'Default', $actualMessage);

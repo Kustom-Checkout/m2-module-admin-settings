@@ -16,7 +16,7 @@
                 <methods>delivery</methods>
                 <model>Klarna\Kco\Model\Carrier\Klarna</model>
                 <name>Shipping Method Gateway</name>
-                <title>Klarna</title>
+                <title>Kustom</title>
                 <handling_type>F</handling_type>
             </klarna_shipping_method_gateway>
         </carriers>
@@ -24,7 +24,7 @@
             <klarna_kco>
                 <model>Klarna\Kco\Model\Payment\Kco</model>
                 <payment_action>authorize</payment_action>
-                <title>Klarna Checkout</title>
+                <title>Kustom Checkout</title>
                 <group>klarna</group>
                 <active>0</active>
                 <allowspecific>0</allowspecific>
@@ -53,7 +53,7 @@
             <klarna_kp>
                 <model>Klarna\Kp\Model\Payment\Kp</model>
                 <payment_action>authorize</payment_action>
-                <title>Klarna Payments</title>
+                <title>Kustom Payments</title>
                 <group>klarna</group>
                 <active>0</active>
                 <data_sharing>1</data_sharing>
