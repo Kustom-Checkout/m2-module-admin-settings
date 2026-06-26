@@ -42,7 +42,7 @@ class Message
         $urlPayments = $this->urlBuilder->getUrl('adminhtml/system_config/edit/section/payment');
 
         $message = '<strong>';
-        $message .= __('Klarna Checkout shipping country configuration warning:');
+        $message .= __('Kustom Checkout shipping country configuration warning:');
         $message .= '</strong><p>';
         $message .= __(
             'No shipping countries are enabled. ' .
@@ -52,7 +52,7 @@ class Message
         $message .= implode(', ', $stores);
         $message .= '</p><p>';
         $message .= __(
-            'Click here to go to <a href="%1">Klarna Configuration</a> and change your settings.',
+            'Click here to go to <a href="%1">Kustom Configuration</a> and change your settings.',
             $urlPayments
         );
         $message .= "</p>";
@@ -71,7 +71,7 @@ class Message
         $urlPayments = $this->urlBuilder->getUrl('adminhtml/system_config/edit/section/payment');
 
         $message = '<strong>';
-        $message .= __('Klarna Checkout customer group configuration warning:');
+        $message .= __('Kustom Checkout customer group configuration warning:');
         $message .= '</strong><p>';
         $message .= __(
             'All customer groups are disabled. ' .
@@ -81,7 +81,7 @@ class Message
         $message .= implode(', ', $stores);
         $message .= '</p><p>';
         $message .= __(
-            'Click here to go to <a href="%1">Klarna Configuration</a> and change your settings.',
+            'Click here to go to <a href="%1">Kustom Configuration</a> and change your settings.',
             $urlPayments
         );
         $message .= "</p>";

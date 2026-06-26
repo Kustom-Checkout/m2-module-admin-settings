@@ -135,7 +135,7 @@ class Message
     private function getPrefixMessage(): string
     {
         $message = '<strong>';
-        $message .= __('Klarna Checkout design warning:');
+        $message .= __('Kustom Checkout design warning:');
         $message .= '</strong><p>';
 
         return $message;
@@ -155,7 +155,7 @@ class Message
         $message .= implode(', ', $stores);
         $message .= '</p><p>';
         $message .= __(
-            'Click here to go to <a href="%1">Klarna Design Configuration</a> and ' .
+            'Click here to go to <a href="%1">Kustom Design Configuration</a> and ' .
             'change your settings.',
             $url
         );

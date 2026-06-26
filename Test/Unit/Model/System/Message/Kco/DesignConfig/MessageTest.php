@@ -177,7 +177,7 @@ class MessageTest extends TestCase
      */
     private function assertBasicTextExists($actualMessage): void
     {
-        $this->assertStringContainsString(__('Klarna Checkout design warning:')->__toString(), $actualMessage);
+        $this->assertStringContainsString(__('Kustom Checkout design warning:')->__toString(), $actualMessage);
         $this->assertStringContainsString(__('Store(s) affected: ') . 'Default', $actualMessage);
         $this->assertStringContainsString(self::CHECKOUT_CONFIG_URL, $actualMessage);
     }

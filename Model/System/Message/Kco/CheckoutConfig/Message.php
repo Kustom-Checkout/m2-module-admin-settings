@@ -43,19 +43,19 @@ class Message
         $urlCustomer = $this->urlBuilder->getUrl('adminhtml/system_config/edit/section/customer');
 
         $message = '<strong>';
-        $message .= __('Klarna Checkout title mandatory warning:');
+        $message .= __('Kustom Checkout title mandatory warning:');
         $message .= '</strong><p>';
         $message .= __(
-            'The title value from the Klarna Checkout and customer settings are incorrectly configured. ' .
+            'The title value from the Kustom Checkout and customer settings are incorrectly configured. ' .
             'Either they should both be required or you can leave the setting as optional under customer ' .
             'settings. However, if the setting is “required” under customer settings then it must be set to ' .
-            '“required” under Klarna Checkout as well.'
+            '“required” under Kustom Checkout as well.'
         ) . '</p><p>';
         $message .= __('Store(s) affected: ');
         $message .= implode(', ', $stores);
         $message .= '</p><p>';
         $message .= __(
-            'Click here to go to <a href="%1">Klarna Checkout Configuration</a> and ' .
+            'Click here to go to <a href="%1">Kustom Checkout Configuration</a> and ' .
             'here to go to the <a href="%2">Customer Configuration</a> to change your settings.',
             $urlKlarnaCheckout,
             $urlCustomer
@@ -77,19 +77,19 @@ class Message
         $urlCustomer = $this->urlBuilder->getUrl('adminhtml/system_config/edit/section/customer');
 
         $message = '<strong>';
-        $message .= __('Klarna Checkout phone mandatory warning:');
+        $message .= __('Kustom Checkout phone mandatory warning:');
         $message .= '</strong><p>';
         $message .= __(
-            'The phone value from the Klarna Checkout and customer settings are incorrectly configured. ' .
+            'The phone value from the Kustom Checkout and customer settings are incorrectly configured. ' .
             'Either they should both be required or you can leave the setting as optional under customer ' .
             'settings. However, if the setting is “required” under customer settings then it must be set to ' .
-            '“required” under Klarna Checkout as well.'
+            '“required” under Kustom Checkout as well.'
         ) . '</p><p>';
         $message .= __('Store(s) affected: ');
         $message .= implode(', ', $stores);
         $message .= '</p><p>';
         $message .= __(
-            'Click here to go to <a href="%1">Klarna Checkout Configuration</a> and ' .
+            'Click here to go to <a href="%1">Kustom Checkout Configuration</a> and ' .
             'here to go to the <a href="%2">Customer Configuration</a> to change your settings.',
             $urlKlarnaCheckout,
             $urlCustomer
@@ -111,19 +111,19 @@ class Message
         $urlCustomer = $this->urlBuilder->getUrl('adminhtml/system_config/edit/section/customer');
 
         $message = '<strong>';
-        $message .= __('Klarna Checkout date of birth mandatory warning:');
+        $message .= __('Kustom Checkout date of birth mandatory warning:');
         $message .= '</strong><p>';
         $message .= __(
-            'The date of birth value from the Klarna Checkout and customer settings are incorrectly configured. ' .
+            'The date of birth value from the Kustom Checkout and customer settings are incorrectly configured. ' .
             'Either they should both be required or you can leave the setting as optional under customer ' .
             'settings. However, if the setting is “required” under customer settings then it must be set to ' .
-            '“required” under Klarna Checkout as well.'
+            '“required” under Kustom Checkout as well.'
         ) . '</p><p>';
         $message .= __('Store(s) affected: ');
         $message .= implode(', ', $stores);
         $message .= '</p><p>';
         $message .= __(
-            'Click here to go to <a href="%1">Klarna Checkout Configuration</a> and ' .
+            'Click here to go to <a href="%1">Kustom Checkout Configuration</a> and ' .
             'here to go to the <a href="%2">Customer Configuration</a> to change your settings.',
             $urlKlarnaCheckout,
             $urlCustomer
@@ -144,7 +144,7 @@ class Message
         $urlKlarnaCheckout = $this->urlBuilder->getUrl('adminhtml/system_config/edit/section/checkout');
 
         $message = '<strong>';
-        $message .= __('Klarna Checkout terms and conditions warning:');
+        $message .= __('Kustom Checkout terms and conditions warning:');
         $message .= '</strong><p>';
         $message .= __(
             'No url for the terms and conditions is configured. ' .
@@ -154,7 +154,7 @@ class Message
         $message .= implode(', ', $stores);
         $message .= '</p><p>';
         $message .= __(
-            'Click here to go to <a href="%1">Klarna Checkout Configuration</a> and ' .
+            'Click here to go to <a href="%1">Kustom Checkout Configuration</a> and ' .
             'change your settings.',
             $urlKlarnaCheckout
         );
