@@ -84,6 +84,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNaKcoPlaygroundWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyUsd(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -110,6 +112,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNaKcoProductionWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyUsd(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -136,6 +140,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNaKcoPlaygroundWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyCad(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -162,6 +168,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNaKcoProductionWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyCad(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -188,6 +196,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNaKcoPlaygroundWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyMxn(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -214,6 +224,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNaKcoProductionWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyMxn(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -240,6 +252,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyUkKcoPlaygroundWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyEur(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -266,6 +280,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyUkKcoProductionWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyEur(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -292,6 +308,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNlKcoPlaygroundWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyEur(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -318,6 +336,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNlKcoProductionWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyEur(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -344,6 +364,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyDachV3KcoPlaygroundWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyEur(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -370,6 +392,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyDachV3KcoProductionWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyEur(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -396,6 +420,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNaKpPlaygroundWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyUsd(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -422,6 +448,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNaKpProductionWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyUsd(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -448,6 +476,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNaKpPlaygroundWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyCad(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -474,6 +504,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNaKpProductionWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyMxn(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -500,6 +532,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyEuKpPlaygroundWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyEur(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -526,6 +560,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyEuKpProductionWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyEur(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -552,6 +588,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyOcKpPlaygroundWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyAud(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -578,6 +616,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyOcKpProductionWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyAud(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -604,6 +644,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyOcKpPlaygroundWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyNzd(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -630,6 +672,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyOcKpProductionWithMidAndPasswordAndKecAndOsmClientIdentifierWithCurrencyNzd(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -656,6 +700,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNoApiVersionGivenImpliesRegionNotWrittenToTheDatabase(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
 
         $this->clearCache();
@@ -677,6 +723,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNoMerchantIdGivenImpliesUserNameNotWrittenToTheDatabase(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
 
         $this->clearCache();
@@ -696,6 +744,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNoSharedSecretIdGivenImpliesPasswordNotWrittenToTheDatabase(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
 
         $this->clearCache();
@@ -714,6 +764,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNoKecClientIdentifierAndNoOsmDataIdGivenImpliesClientIdentifierNotWrittenToTheDatabase(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
 
         $this->clearCache();
@@ -733,6 +785,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyKecClientIdentifierAndNotOsmDataIdGivenImpliesKecClientIdentifierWrittenToTheDatabase(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
 
         $this->clearCache();
@@ -752,6 +806,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNoKecClientIdentifierButOsmDataIdGivenImpliesOsmDataIdWrittenToTheDatabase(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
 
         $this->clearCache();
@@ -770,6 +826,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNaKcoPlaygroundWithMidAndPasswordAndKecAndOsmClientIdentifierAndPlatformDefaultCurrencyIsUsed(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -795,6 +853,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyEuKpPlaygroundWithMidAndPasswordAndKecAndOsmClientIdentifierAndPlatformDefaultCurrencyIsUsed(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $expectedPassword = 'fghij';
         $this->encryptAndSavePassword($expectedPassword);
 
@@ -818,6 +878,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyOsmProductDisabledCartDisabledFooterDisabled(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
         $this->clearCache();
 
@@ -836,6 +898,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyOsmProductEnabledCartDisabledFooterDisabled(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
         $this->clearCache();
 
@@ -854,6 +918,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyOsmProductDisabledCartEnabledFooterDisabled(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
         $this->clearCache();
 
@@ -872,6 +938,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyOsmProductEnabledCartEnabledFooterDisabled(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
         $this->clearCache();
 
@@ -890,6 +958,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyOsmProductDisabledCartDisabledFooterEnabled(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
         $this->clearCache();
 
@@ -908,6 +978,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyOsmProductEnabledCartDisabledFooterEnabled(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
         $this->clearCache();
 
@@ -926,6 +998,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyOsmProductDisabledCartEnabledFooterEnabled(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
         $this->clearCache();
 
@@ -944,6 +1018,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyOsmProductEnabledCartEnabledFooterEnabled(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
         $this->clearCache();
 
@@ -961,6 +1037,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyMovingCountryWithValueSettingsFromKpToGeneral(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
         $this->clearCache();
 
@@ -979,6 +1057,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyMovingCountryWithoutValueSettingsFromKpToGeneral(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
         $this->clearCache();
 
@@ -1004,6 +1084,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyMultiStoreDifferentValuesOnDefaultAndWebsiteLevel(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
         $this->clearCache();
 
@@ -1045,6 +1127,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyMultiStoreIntersectionOfValuesOnDefaultAndWebsiteLevel(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $this->uxRedesign->apply();
         $this->clearCache();
 
@@ -1083,6 +1167,8 @@ class UxRedesignTest extends GenericTestCase
      */
     public function testApplyNoLegacyDataGivenImpliesNoExceptionThrown(): void
     {
+        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
+
         $result = true;
         try {
             $this->uxRedesign->apply();

@@ -87,7 +87,7 @@ class MessageTest extends TestCase
     protected function setUp(): void
     {
         $mockFactory = new MockFactory($this);
-        $objectFactory = new TestObjectFactory($mockFactory);
+        $objectFactory = new TestObjectFactory('');
         $this->model = $objectFactory->create(Message::class);
         $this->dependencyMocks = $objectFactory->getDependencyMocks();
         $this->dependencyMocks['url']->method('getUrl')->willReturn(self::PAYMENT_CONFIG_URL);

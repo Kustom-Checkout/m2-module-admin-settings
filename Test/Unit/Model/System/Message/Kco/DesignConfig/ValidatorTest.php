@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Copyright © Klarna Bank AB (publ)
  *
@@ -9,7 +10,6 @@
 namespace Klarna\AdminSettings\Test\Unit\Model\System\Config\Message\Kco\DesignConfig;
 
 use Klarna\AdminSettings\Model\System\Message\Kco\DesignConfig\Validator;
-use Klarna\Base\Test\Unit\Mock\MockFactory;
 use Klarna\Base\Test\Unit\Mock\ScopeMocker;
 use Klarna\Base\Test\Unit\Mock\TestObjectFactory;
 use Magento\Store\Model\Store;
@@ -234,9 +234,8 @@ class ValidatorTest extends TestCase
 
     protected function setUp(): void
     {
-        $mockFactory = new MockFactory($this);
-        $objectFactory = new TestObjectFactory($mockFactory);
-        $presets = new ScopeMocker();
+        $objectFactory = new TestObjectFactory('');
+        $presets = new ScopeMocker('');
 
         $this->storeMock = $presets->createStoreMock();
         $this->model = $objectFactory->create(Validator::class);

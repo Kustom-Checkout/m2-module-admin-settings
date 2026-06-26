@@ -59,7 +59,7 @@ class Customproductattributes implements \Magento\Framework\Data\OptionSourceInt
             return $attribute->getFrontendLabel();
         }
         if (isset($frontendLabels[0]) && $frontendLabels[0] instanceof AttributeFrontendLabelInterface) {
-            foreach ($attribute->getFrontendLabels() as $label) {
+            foreach ($frontendLabels as $label) {
                 $frontendLabel[$label->getStoreId()] = $label->getLabel();
             }
         }

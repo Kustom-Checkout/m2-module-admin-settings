@@ -89,7 +89,7 @@ class CustomcheckboxesTest extends TestCase
     protected function setUp(): void
     {
         $mockFactory            = new MockFactory($this);
-        $objectFactory          = new TestObjectFactory($mockFactory);
+        $objectFactory          = new TestObjectFactory('');
         $this->customcheckboxes = $objectFactory->create(Customcheckboxes::class);
         $this->dependencyMocks  = $objectFactory->getDependencyMocks();
         $this->abstractElement  = $mockFactory->create(AbstractElement::class);

@@ -55,7 +55,7 @@ class AdminLevelTest extends TestCase
     protected function setUp(): void
     {
         $mockFactory = new MockFactory($this);
-        $objectFactory = new TestObjectFactory($mockFactory);
+        $objectFactory = new TestObjectFactory('');
 
         $this->adminLevel = $objectFactory->create(AdminLevel::class);
         $this->dependencyMocks = $objectFactory->getDependencyMocks();
