@@ -1,11 +1,11 @@
 {
-    "name": "vaimo/kustom-module-admin-settings",
+    "name": "kustom/module-admin-settings",
     "description": "Kustom Admin Settings Magento 2 Extension",
     "type": "magento2-module",
     "license": "Apache-2.0",
-    "version": "1.1.4",
+    "version": "1.2.0",
     "require": {
-        "vaimo/kustom-module-base": "11.0.*",
+        "kustom/module-base": "^11.0",
         "magento/framework": "^103",
         "magento/module-payment": "^100.1|^100.4",
         "magento/module-quote": "^101.0|^101.2",
@@ -17,6 +17,8 @@
         "psr-4": {
             "Klarna\\AdminSettings\\": "."
         },
-        "files": [ "registration.php" ]
+        "files": [
+            "registration.php"
+        ]
     }
 }
