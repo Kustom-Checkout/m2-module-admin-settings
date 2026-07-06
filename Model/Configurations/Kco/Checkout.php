@@ -161,4 +161,14 @@ class Checkout extends AbstractConfiguration
     {
         return $this->getCheckoutContentValue($store, 'business_id_attribute');
     }
+
+    /**
+     * @param StoreInterface $store
+     *
+     * @return bool
+     */
+    public function isUseFullCheckout(StoreInterface $store): bool
+    {
+        return $this->getCheckoutFlagValue($store, 'use_full_checkout');
+    }
 }

@@ -94,6 +94,7 @@
                 <invoice_download>1</invoice_download>
                 <phone_mandatory>1</phone_mandatory>
                 <national_identification_number_mandatory>1</national_identification_number_mandatory>
+                <use_full_checkout>0</use_full_checkout>
             </klarna_kco>
         </checkout>
     </default>
