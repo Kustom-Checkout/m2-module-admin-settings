@@ -56,6 +56,6 @@ class ShippingOptions extends AbstractConfiguration
      */
     public function isTmsConfigurationOverrideDisabled(StoreInterface $store): bool
     {
-        return $this->getCheckqoutFlagValue($store, 'tms_configuration_override_disabled');
+        return $this->getCheckoutFlagValue($store, 'tms_configuration_override_disabled');
     }
 }
