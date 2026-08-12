@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2025 Kustom AB (Originally developed by Klarna Bank AB)
+ * Copyright © Kustom AB (Originally developed by Klarna Bank AB)
  *
  * For the full copyright and license information, please view the NOTICE
  * and LICENSE files that were distributed with this source code.
