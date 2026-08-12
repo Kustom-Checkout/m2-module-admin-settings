@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.3.0 / 2026-08-12
+
+### Breaking changes
+
+* None
+
+### Features / changes
+
+* KUSTOM-89: Added `isTmsConfigurationOverrideDisabled()` to `Configurations\Kco\ShippingOptions` and a new
+  admin field ("Disable TMS configuration override") under Kustom Checkout → Shipping Options, for merchants
+  migrating from a standalone Ingrid (or other TMS) iframe integration.
+
+### Fixes
+
+* None
+
 ## 1.2.0 / 2026-06-26
 
 ### Breaking changes

@@ -481,6 +481,13 @@
                             <comment>Allow shipping address to be different from billing address.</comment>
                             <config_path>checkout/klarna_kco/separate_address</config_path>
                         </field>
+                        <field id="tms_configuration_override_disabled" translate="label comment" type="select" sortOrder="30"
+                               showInDefault="1" showInWebsite="1" showInStore="0">
+                            <label>Disable TMS configuration override</label>
+                            <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                            <comment>Only enable when migrating from a standalone Ingrid (or other TMS) iframe integration, so shipping options aren't presented twice during the transition. Leave disabled otherwise.</comment>
+                            <config_path>checkout/klarna_kco/tms_configuration_override_disabled</config_path>
+                        </field>
                     </group>
                     <group id="url_options" type="text" sortOrder="50" showInDefault="1" showInWebsite="1"
                            showInStore="0"

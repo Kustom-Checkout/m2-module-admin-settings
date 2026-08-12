@@ -44,4 +44,18 @@ class ShippingOptions extends AbstractConfiguration
     {
         return $this->getCheckoutFlagValue($store, 'shipping_in_iframe');
     }
+
+    /**
+     * Returns true if the TMS configuration override should be disabled.
+     *
+     * Intended for merchants migrating from a standalone Ingrid iframe integration, so that shipping
+     * options aren't presented twice during the transition period.
+     *
+     * @param StoreInterface $store
+     * @return bool
+     */
+    public function isTmsConfigurationOverrideDisabled(StoreInterface $store): bool
+    {
+        return $this->getCheckqoutFlagValue($store, 'tms_configuration_override_disabled');
+    }
 }
