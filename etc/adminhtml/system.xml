@@ -396,6 +396,13 @@
                             <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
                             <config_path>checkout/klarna_kco/auto_focus</config_path>
                         </field>
+                        <field id="use_full_checkout" translate="label comment" type="select" sortOrder="11" showInDefault="1"
+                               showInWebsite="1" showInStore="0">
+                            <label>Use Full Kustom Checkout</label>
+                            <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                            <config_path>checkout/klarna_kco/use_full_checkout</config_path>
+                            <comment>When accessing checkout, users will be redirected to Kustom's Checkout portal for the whole checkout experience</comment>
+                        </field>
                     </group>
                     <group id="prefill_options" type="text" sortOrder="20" showInDefault="1" showInWebsite="1"
                            showInStore="0"
