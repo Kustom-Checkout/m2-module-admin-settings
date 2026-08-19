@@ -1,20 +1,5 @@
 # Changelog
 
-## 1.4.0 / 2026-08-14
-
-### Breaking changes
-
-* None
-
-### Features / changes
-
-* KUSTOM-89: A new admin field ("Disable TMS configuration override") under Kustom Checkout → Shipping Options,
-  for merchants migrating from a standalone Ingrid (or other TMS) iframe integration.
-
-### Fixes
-
-* None
-
 ## 1.3.0 / 2026-08-14
 
 ### Breaking changes
@@ -24,6 +9,8 @@
 ### Features / changes
 
 * KUSTOM-96: Support for the full checkout feature
+* KUSTOM-89: A new admin field ("Disable TMS configuration override") under Kustom Checkout → Shipping Options,
+  for merchants migrating from a standalone Ingrid (or other TMS) iframe integration.
 
 ### Fixes
 

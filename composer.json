@@ -3,7 +3,7 @@
     "description": "Kustom Admin Settings Magento 2 Extension",
     "type": "magento2-module",
     "license": "Apache-2.0",
-    "version": "1.4.0",
+    "version": "1.3.0",
     "require": {
         "kustom/module-base": "^11.0",
         "magento/framework": "^103",
