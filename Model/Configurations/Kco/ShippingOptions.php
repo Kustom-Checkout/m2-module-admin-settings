@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © Klarna Bank AB (publ)
+ * Copyright © Kustom AB (Originally developed by Klarna Bank AB)
  *
  * For the full copyright and license information, please view the NOTICE
  * and LICENSE files that were distributed with this source code.
@@ -43,5 +43,19 @@ class ShippingOptions extends AbstractConfiguration
     public function isShippingInIframe(StoreInterface $store): bool
     {
         return $this->getCheckoutFlagValue($store, 'shipping_in_iframe');
+    }
+
+    /**
+     * Returns true if the TMS configuration override should be disabled.
+     *
+     * Intended for merchants migrating from a standalone Ingrid iframe integration, so that shipping
+     * options aren't presented twice during the transition period.
+     *
+     * @param StoreInterface $store
+     * @return bool
+     */
+    public function isTmsConfigurationOverrideDisabled(StoreInterface $store): bool
+    {
+        return $this->getCheckoutFlagValue($store, 'tms_configuration_override_disabled');
     }
 }
