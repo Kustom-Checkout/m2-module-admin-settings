@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © Klarna Bank AB (publ)
+ * Copyright 2025 Kustom AB (Originally developed by Klarna Bank AB)
  *
  * For the full copyright and license information, please view the NOTICE
  * and LICENSE files that were distributed with this source code.
@@ -101,21 +101,6 @@ class Checkout extends AbstractConfiguration
         }
 
         return array_map('trim', array_filter($result));
-    }
-
-    /**
-     * Returns true if KP is enabled
-     *
-     * @param StoreInterface $store
-     * @return bool
-     */
-    public function isKpEnabled(StoreInterface $store): bool
-    {
-        return $this->scopeConfig->isSetFlag(
-            sprintf('payment/klarna_kp/%s', 'active'),
-            ScopeInterface::SCOPE_STORES,
-            $store
-        );
     }
 
     /**

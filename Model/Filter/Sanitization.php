@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © Klarna Bank AB (publ)
+ * Copyright 2025 Kustom AB (Originally developed by Klarna Bank AB)
  *
  * For the full copyright and license information, please view the NOTICE
  * and LICENSE files that were distributed with this source code.
@@ -34,16 +34,6 @@ class Sanitization
         ]
     ];
     public const KCO_PRODUCT_KEY = 'klarna_kco_required';
-    public const KP_INPUT_KEYS = [
-        'klarna_kp_design' => [
-            'color_details',
-            'color_border',
-            'color_border_selected',
-            'color_text',
-            'radius_border'
-        ]
-    ];
-    public const KP_PRODUCT_KEY = 'klarna_kp_required';
 
     /**
      * Sanitizing the KCO input
@@ -54,17 +44,6 @@ class Sanitization
     public function sanitizeKcoInput(array $configData): array
     {
         return $this->sanitize(self::KCO_PRODUCT_KEY, self::KCO_INPUT_KEYS, $configData);
-    }
-
-    /**
-     * Sanitizing the KP input
-     *
-     * @param array $configData
-     * @return array
-     */
-    public function sanitizeKpInput(array $configData): array
-    {
-        return $this->sanitize(self::KP_PRODUCT_KEY, self::KP_INPUT_KEYS, $configData);
     }
 
     /**
