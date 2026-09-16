@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © Klarna Bank AB (publ)
+ * Copyright 2025 Kustom AB (Originally developed by Klarna Bank AB)
  *
  * For the full copyright and license information, please view the NOTICE
  * and LICENSE files that were distributed with this source code.
@@ -10,7 +10,6 @@ declare(strict_types=1);
 namespace Klarna\AdminSettings\Test\Integration\Setup\Patch\Data;
 
 use Klarna\AdminSettings\Model\Configurations\General;
-use Klarna\AdminSettings\Model\Configurations\Osm;
 use Klarna\AdminSettings\Setup\Patch\Data\UxRedesign;
 use Klarna\Base\Test\Integration\Helper\GenericTestCase;
 use Klarna\AdminSettings\Model\Configurations\Api;
@@ -54,10 +53,6 @@ class UxRedesignTest extends GenericTestCase
      * @var EncryptorInterface
      */
     private $encryptor;
-    /**
-     * @var Osm
-     */
-    private $osmConfig;
     /**
      * @var ScopeConfigInterface
      */
@@ -867,174 +862,6 @@ class UxRedesignTest extends GenericTestCase
         static::assertEquals($expectedPassword, $this->apiConfig->getPassword($this->store, 'EUR'));
         static::assertEquals('klmno', $this->apiConfig->getClientIdentifier($this->store, 'EUR'));
     }
-
-    /**
-     * @magentoConfigFixture default/klarna/osm/product_enabled 0
-     * @magentoConfigFixture default/klarna/osm/cart_enabled 0
-     * @magentoConfigFixture default/klarna/osm/footer_enabled 0
-     *
-     * @magentoDbIsolation enabled
-     * @magentoAppIsolation enabled
-     */
-    public function testApplyOsmProductDisabledCartDisabledFooterDisabled(): void
-    {
-        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
-
-        $this->uxRedesign->apply();
-        $this->clearCache();
-
-        static::assertFalse($this->osmConfig->isEnabledOnProductPage($this->store));
-        static::assertFalse($this->osmConfig->isEnabledOnCartPage($this->store));
-        static::assertFalse($this->osmConfig->isEnabledOnFooter($this->store));
-    }
-
-    /**
-     * @magentoConfigFixture default/klarna/osm/product_enabled 1
-     * @magentoConfigFixture default/klarna/osm/cart_enabled 0
-     * @magentoConfigFixture default/klarna/osm/footer_enabled 0
-     *
-     * @magentoDbIsolation enabled
-     * @magentoAppIsolation enabled
-     */
-    public function testApplyOsmProductEnabledCartDisabledFooterDisabled(): void
-    {
-        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
-
-        $this->uxRedesign->apply();
-        $this->clearCache();
-
-        static::assertTrue($this->osmConfig->isEnabledOnProductPage($this->store));
-        static::assertFalse($this->osmConfig->isEnabledOnCartPage($this->store));
-        static::assertFalse($this->osmConfig->isEnabledOnFooter($this->store));
-    }
-
-    /**
-     * @magentoConfigFixture default/klarna/osm/product_enabled 0
-     * @magentoConfigFixture default/klarna/osm/cart_enabled 1
-     * @magentoConfigFixture default/klarna/osm/footer_enabled 0
-     *
-     * @magentoDbIsolation enabled
-     * @magentoAppIsolation enabled
-     */
-    public function testApplyOsmProductDisabledCartEnabledFooterDisabled(): void
-    {
-        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
-
-        $this->uxRedesign->apply();
-        $this->clearCache();
-
-        static::assertFalse($this->osmConfig->isEnabledOnProductPage($this->store));
-        static::assertTrue($this->osmConfig->isEnabledOnCartPage($this->store));
-        static::assertFalse($this->osmConfig->isEnabledOnFooter($this->store));
-    }
-
-    /**
-     * @magentoConfigFixture default/klarna/osm/product_enabled 1
-     * @magentoConfigFixture default/klarna/osm/cart_enabled 1
-     * @magentoConfigFixture default/klarna/osm/footer_enabled 0
-     *
-     * @magentoDbIsolation enabled
-     * @magentoAppIsolation enabled
-     */
-    public function testApplyOsmProductEnabledCartEnabledFooterDisabled(): void
-    {
-        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
-
-        $this->uxRedesign->apply();
-        $this->clearCache();
-
-        static::assertTrue($this->osmConfig->isEnabledOnProductPage($this->store));
-        static::assertTrue($this->osmConfig->isEnabledOnCartPage($this->store));
-        static::assertFalse($this->osmConfig->isEnabledOnFooter($this->store));
-    }
-
-    /**
-     * @magentoConfigFixture default/klarna/osm/product_enabled 0
-     * @magentoConfigFixture default/klarna/osm/cart_enabled 0
-     * @magentoConfigFixture default/klarna/osm/footer_enabled 1
-     *
-     * @magentoDbIsolation enabled
-     * @magentoAppIsolation enabled
-     */
-    public function testApplyOsmProductDisabledCartDisabledFooterEnabled(): void
-    {
-        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
-
-        $this->uxRedesign->apply();
-        $this->clearCache();
-
-        static::assertFalse($this->osmConfig->isEnabledOnProductPage($this->store));
-        static::assertFalse($this->osmConfig->isEnabledOnCartPage($this->store));
-        static::assertTrue($this->osmConfig->isEnabledOnFooter($this->store));
-    }
-
-    /**
-     * @magentoConfigFixture default/klarna/osm/product_enabled 1
-     * @magentoConfigFixture default/klarna/osm/cart_enabled 0
-     * @magentoConfigFixture default/klarna/osm/footer_enabled 1
-     *
-     * @magentoDbIsolation enabled
-     * @magentoAppIsolation enabled
-     */
-    public function testApplyOsmProductEnabledCartDisabledFooterEnabled(): void
-    {
-        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
-
-        $this->uxRedesign->apply();
-        $this->clearCache();
-
-        static::assertTrue($this->osmConfig->isEnabledOnProductPage($this->store));
-        static::assertFalse($this->osmConfig->isEnabledOnCartPage($this->store));
-        static::assertTrue($this->osmConfig->isEnabledOnFooter($this->store));
-    }
-
-    /**
-     * @magentoConfigFixture default/klarna/osm/product_enabled 0
-     * @magentoConfigFixture default/klarna/osm/cart_enabled 1
-     * @magentoConfigFixture default/klarna/osm/footer_enabled 1
-     *
-     * @magentoDbIsolation enabled
-     * @magentoAppIsolation enabled
-     */
-    public function testApplyOsmProductDisabledCartEnabledFooterEnabled(): void
-    {
-        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
-
-        $this->uxRedesign->apply();
-        $this->clearCache();
-
-        static::assertFalse($this->osmConfig->isEnabledOnProductPage($this->store));
-        static::assertTrue($this->osmConfig->isEnabledOnCartPage($this->store));
-        static::assertTrue($this->osmConfig->isEnabledOnFooter($this->store));
-    }
-
-    /**
-     * @magentoConfigFixture default/klarna/osm/product_enabled 1
-     * @magentoConfigFixture default/klarna/osm/cart_enabled 1
-     * @magentoConfigFixture default/klarna/osm/footer_enabled 1
-     *
-     * @magentoDbIsolation enabled
-     * @magentoAppIsolation enabled
-     */
-    public function testApplyOsmProductEnabledCartEnabledFooterEnabled(): void
-    {
-        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
-
-        $this->uxRedesign->apply();
-        $this->clearCache();
-
-        static::assertTrue($this->osmConfig->isEnabledOnProductPage($this->store));
-        static::assertTrue($this->osmConfig->isEnabledOnCartPage($this->store));
-        static::assertTrue($this->osmConfig->isEnabledOnFooter($this->store));
-    }
-
-    /**
-     * @magentoConfigFixture default/payment/klarna_kp/allowspecific 1
-     * @magentoConfigFixture default/payment/klarna_kp/specificcountry DE,US,UK
-     *
-     * @magentoDbIsolation enabled
-     * @magentoAppIsolation enabled
-     */
     public function testApplyMovingCountryWithValueSettingsFromKpToGeneral(): void
     {
         $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
@@ -1068,63 +895,6 @@ class UxRedesignTest extends GenericTestCase
         static::assertEmpty($this->getDatabaseValue('klarna/general/allow_specific_countries', ScopeConfigInterface::SCOPE_TYPE_DEFAULT, '0'));
         static::assertEmpty($this->getDatabaseValue('klarna/general/specific_countries', ScopeConfigInterface::SCOPE_TYPE_DEFAULT, '0'));
     }
-
-    /**
-     * @magentoConfigFixture current_website klarna/api/api_version na
-     * @magentoConfigFixture current_website klarna/api/test_mode 1
-     * @magentoConfigFixture current_website klarna/api/merchant_id abcde
-     * @magentoConfigFixture current_website payment/kec/client_identifier klmno
-     * @magentoConfigFixture current_website currency/options/default USD
-     * @magentoConfigFixture default/klarna/osm/product_enabled 1
-     * @magentoConfigFixture default/klarna/osm/cart_enabled 1
-     * @magentoConfigFixture default/klarna/osm/footer_enabled 1
-     *
-     * @magentoDbIsolation enabled
-     * @magentoAppIsolation enabled
-     */
-    public function testApplyMultiStoreDifferentValuesOnDefaultAndWebsiteLevel(): void
-    {
-        $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
-
-        $this->uxRedesign->apply();
-        $this->clearCache();
-
-        static::assertEquals('na', $this->apiConfig->getRegion($this->store, 'USD'));
-        static::assertTrue($this->apiConfig->isTestMode($this->store, 'USD'));
-        static::assertEquals('abcde', $this->apiConfig->getUserName($this->store, 'USD'));
-        static::assertEquals('klmno', $this->apiConfig->getClientIdentifier($this->store, 'USD'));
-        static::assertTrue($this->osmConfig->isEnabledOnProductPage($this->store));
-        static::assertTrue($this->osmConfig->isEnabledOnCartPage($this->store));
-        static::assertTrue($this->osmConfig->isEnabledOnFooter($this->store));
-
-        static::assertEquals('na', $this->getDatabaseValue('klarna/api/region', ScopeInterface::SCOPE_WEBSITES, '1'));
-        static::assertEquals('1', $this->getDatabaseValue('klarna/api_us/api_mode', ScopeInterface::SCOPE_WEBSITES, '1'));
-        static::assertEquals('abcde', $this->getDatabaseValue('klarna/api_us/username_playground', ScopeInterface::SCOPE_WEBSITES, '1'));
-        static::assertEquals('klmno', $this->getDatabaseValue('klarna/api_us/client_identifier_playground', ScopeInterface::SCOPE_WEBSITES, '1'));
-        static::assertEquals('product,cart,footer', $this->getDatabaseValue('klarna/osm/position', ScopeConfigInterface::SCOPE_TYPE_DEFAULT, '0'));
-
-        static::assertEmpty($this->getDatabaseValue('klarna/api/region', ScopeConfigInterface::SCOPE_TYPE_DEFAULT, '0'));
-        static::assertEmpty($this->getDatabaseValue('klarna/api_us/api_mode', ScopeConfigInterface::SCOPE_TYPE_DEFAULT, '0'));
-        static::assertEmpty($this->getDatabaseValue('klarna/api_us/username_playground', ScopeConfigInterface::SCOPE_TYPE_DEFAULT, '0'));
-        static::assertEmpty($this->getDatabaseValue('klarna/api_us/client_identifier_playground', ScopeConfigInterface::SCOPE_TYPE_DEFAULT, '0'));
-        static::assertEmpty($this->getDatabaseValue('klarna/osm/position', ScopeInterface::SCOPE_WEBSITES, '1'));
-    }
-
-    /**
-     * @magentoConfigFixture current_website klarna/api/api_version na
-     * @magentoConfigFixture current_website klarna/api/test_mode 1
-     * @magentoConfigFixture current_website klarna/api/merchant_id abcde
-     * @magentoConfigFixture current_website payment/kec/client_identifier klmno
-     * @magentoConfigFixture current_website currency/options/default USD
-     * @magentoConfigFixture default/klarna/api/api_version kp_eu
-     * @magentoConfigFixture default/klarna/api/test_mode 1
-     * @magentoConfigFixture default/klarna/api/merchant_id ttttttt
-     * @magentoConfigFixture default/payment/kec/client_identifier zzzzzzz
-     * @magentoConfigFixture default/currency/options/default EUR
-     *
-     * @magentoDbIsolation enabled
-     * @magentoAppIsolation enabled
-     */
     public function testApplyMultiStoreIntersectionOfValuesOnDefaultAndWebsiteLevel(): void
     {
         $this->markTestSkipped('Skipped for now since the logic is not anymore that relevant');
@@ -1202,7 +972,6 @@ class UxRedesignTest extends GenericTestCase
         parent::setUp();
         $this->uxRedesign = $this->objectManager->get(UxRedesign::class);
         $this->apiConfig = $this->objectManager->get(Api::class);
-        $this->osmConfig = $this->objectManager->get(Osm::class);
         $this->generalConfig = $this->objectManager->get(General::class);
 
         $storeManager = $this->objectManager->get(StoreManagerInterface::class);

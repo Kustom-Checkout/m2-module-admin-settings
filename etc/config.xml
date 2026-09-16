@@ -50,36 +50,6 @@
                 <can_use_for_multishipping>0</can_use_for_multishipping>
                 <shipping_and_billing_countries_same>1</shipping_and_billing_countries_same>
             </klarna_kco>
-            <klarna_kp>
-                <model>Klarna\Kp\Model\Payment\Kp</model>
-                <payment_action>authorize</payment_action>
-                <title>Kustom Payments</title>
-                <group>klarna</group>
-                <active>0</active>
-                <data_sharing>1</data_sharing>
-                <allowspecific>0</allowspecific>
-                <order_status>processing</order_status>
-                <!-- Begin variables for virtual type -->
-                <can_order>0</can_order>
-                <can_authorize>1</can_authorize>
-                <can_capture>1</can_capture>
-                <can_fetch_transaction_information>1</can_fetch_transaction_information>
-                <can_capture_partial>1</can_capture_partial>
-                <can_capture_once>0</can_capture_once>
-                <can_refund>1</can_refund>
-                <can_refund_partial_per_invoice>1</can_refund_partial_per_invoice>
-                <can_void>1</can_void>
-                <can_cancel>1</can_cancel>
-                <can_use_internal>0</can_use_internal>
-                <can_use_checkout>1</can_use_checkout>
-                <can_edit>0</can_edit>
-                <is_gateway>0</is_gateway>
-                <is_offline>0</is_offline>
-                <can_initialize>0</can_initialize>
-                <can_review_payment>0</can_review_payment>
-                <can_use_for_multishipping>0</can_use_for_multishipping>
-                <!-- End variables for virtual type -->
-            </klarna_kp>
         </payment>
         <checkout>
             <klarna_kco>
