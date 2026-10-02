@@ -168,7 +168,7 @@
                         <field id="payment_action" translate="label comment" type="select" sortOrder="0"
                                showInDefault="1" showInWebsite="1">
                             <label>Payment Action</label>
-                            <comment>"Authorize" only reserves funds on the customer's Kustom order. "Authorize and Capture" automatically captures the payment when the order is placed.</comment>
+                            <comment>"Authorize" only reserves funds. "Authorize and Capture" automatically captures payment.</comment>
                             <source_model>Klarna\AdminSettings\Model\System\Config\Kco\Source\PaymentAction</source_model>
                             <config_path>payment/klarna_kco/payment_action</config_path>
                         </field>
