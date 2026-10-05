@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.0 / 2026-10-05
+
+### Features / changes
+
+* KUSTOM-43: Payment action config to support automatic capture of payments.
+
 ## 1.3.0 / 2026-08-14
 
 ### Breaking changes
