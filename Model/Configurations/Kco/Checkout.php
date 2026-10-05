@@ -11,6 +11,7 @@ namespace Klarna\AdminSettings\Model\Configurations\Kco;
 
 use Klarna\AdminSettings\Model\Configurations\AbstractConfiguration;
 use Klarna\Kco\Model\Payment\Kco;
+use Magento\Payment\Model\Method\AbstractMethod;
 use Magento\Store\Model\ScopeInterface;
 use Magento\Store\Api\Data\StoreInterface;
 
@@ -170,5 +171,16 @@ class Checkout extends AbstractConfiguration
     public function isUseFullCheckout(StoreInterface $store): bool
     {
         return $this->getCheckoutFlagValue($store, 'use_full_checkout');
+    }
+
+    /**
+     * Returns true if payment action is set to Authorize and Capture (auto capture)
+     *
+     * @param StoreInterface $store
+     * @return bool
+     */
+    public function isAutoCaptureEnabled(StoreInterface $store): bool
+    {
+        return $this->getPaymentContentValue($store, 'payment_action') === AbstractMethod::ACTION_AUTHORIZE_CAPTURE;
     }
 }
