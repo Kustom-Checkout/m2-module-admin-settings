@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © Klarna Bank AB (publ)
+ * Copyright 2025 Kustom AB (Originally developed by Klarna Bank AB)
  *
  * For the full copyright and license information, please view the NOTICE
  * and LICENSE files that were distributed with this source code.
@@ -69,27 +69,6 @@ class UxRedesignTest extends TestCase
         $this->uxRedesign->apply();
     }
 
-    public function testApplyCallingMethodOsmPreparingData(): void
-    {
-        $this->dependencyMocks['osmManager']->expects(static::atLeastOnce())
-            ->method('prepareMappingData');
-        $this->uxRedesign->apply();
-    }
-
-    public function testApplyCallingMethodUpdateTheme(): void
-    {
-        $this->dependencyMocks['osmManager']->expects(static::atLeastOnce())
-            ->method('updateTheme');
-        $this->uxRedesign->apply();
-    }
-
-    public function testApplyCallingMethodUpdatePosition(): void
-    {
-        $this->dependencyMocks['osmManager']->expects(static::atLeastOnce())
-            ->method('updatePosition');
-        $this->uxRedesign->apply();
-    }
-
     public function testApplyCallingMethodUpdateAllowSpecificCountries(): void
     {
         $this->dependencyMocks['generalManager']->expects(static::atLeastOnce())
@@ -115,22 +94,6 @@ class UxRedesignTest extends TestCase
                 }
             );
         $this->dependencyMocks['apiManager']->expects(static::atLeastOnce())
-            ->method('setScopeCode')
-            ->willReturnCallback(fn($scope) =>
-                match($scope) {
-                    '0' => null,
-                    '1' => null
-                }
-            );
-        $this->dependencyMocks['osmManager']->expects(static::atLeastOnce())
-            ->method('setScope')
-            ->willReturnCallback(fn($scope) =>
-                match($scope) {
-                    'default' => null,
-                    'websites' => null
-                }
-            );
-        $this->dependencyMocks['osmManager']->expects(static::atLeastOnce())
             ->method('setScopeCode')
             ->willReturnCallback(fn($scope) =>
                 match($scope) {
@@ -175,13 +138,6 @@ class UxRedesignTest extends TestCase
             ->method('updatePassword');
         $this->dependencyMocks['apiManager']->expects(static::never())
             ->method('updateClientIdentifier');
-
-        $this->dependencyMocks['osmManager']->expects(static::never())
-            ->method('prepareMappingData');
-        $this->dependencyMocks['osmManager']->expects(static::never())
-            ->method('updateTheme');
-        $this->dependencyMocks['osmManager']->expects(static::never())
-            ->method('updatePosition');
     }
 
     protected function setUp(): void
