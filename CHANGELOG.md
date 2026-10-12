@@ -3,7 +3,7 @@
 ## 2.0.0 / 2026-10-12
 
 ### Breaking changes
-* KUSTOM-118: Discontinued support for Klarna Payments (KP), On-site Messaging (OSM),
+* KUSTOM-118: Discontinued support for Klarna Payments (KP), On-site Messaging (OSM),  
   Sign in with Klarna (SIWK), Klarna Express Checkout (KEC), Klarna API, and Klarna Plugin API.  
   These dependencies have been removed from the core package.
 
