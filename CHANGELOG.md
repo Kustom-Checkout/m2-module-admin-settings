@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.0.0 / 2026-10-12
+
+### Breaking changes
+* KUSTOM-118: Discontinued support for Klarna Payments (KP), On-site Messaging (OSM),
+  Sign in with Klarna (SIWK), Klarna Express Checkout (KEC), Klarna API, and Klarna Plugin API.  
+  These dependencies have been removed from the core package.
+
+### Features / changes
+* None
+
+### Fixes
+* None
+
 ## 1.4.0 / 2026-10-05
 
 ### Features / changes
@@ -13,7 +26,6 @@
 * None
 
 ### Features / changes
-
 * KUSTOM-96: Support for the full checkout feature
 * KUSTOM-89: A new admin field ("Disable TMS configuration override") under Kustom Checkout → Shipping Options,
   for merchants migrating from a standalone Ingrid (or other TMS) iframe integration.
