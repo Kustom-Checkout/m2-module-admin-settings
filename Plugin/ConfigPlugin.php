@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © Klarna Bank AB (publ)
+ * Copyright 2025 Kustom AB (Originally developed by Klarna Bank AB)
  *
  * For the full copyright and license information, please view the NOTICE
  * and LICENSE files that were distributed with this source code.
@@ -48,7 +48,6 @@ class ConfigPlugin
         }
 
         $configData = $this->sanitization->sanitizeKcoInput($configData);
-        $configData = $this->sanitization->sanitizeKpInput($configData);
         $config->setData($configData);
 
         return $config;

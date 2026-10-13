@@ -10,7 +10,6 @@ declare(strict_types=1);
 namespace Klarna\AdminSettings\Model\System\Message;
 
 use Klarna\AdminSettings\Model\Configurations\Kco\Checkout;
-use Klarna\AdminSettings\Model\Configurations\Kp;
 use Magento\Store\Api\Data\StoreInterface;
 use Magento\Store\Model\Store;
 use Magento\Store\Model\StoreManagerInterface;
@@ -23,10 +22,6 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 class Config
 {
     /**
-     * @var Kp
-     */
-    private Kp $kpConfiguration;
-    /**
      * @var Checkout
      */
     private Checkout $kcoConfiguration;
@@ -36,14 +31,12 @@ class Config
     private StoreManagerInterface $storeManager;
 
     /**
-     * @param Kp $kpConfiguration
      * @param Checkout $kcoConfiguration
      * @param StoreManagerInterface $storeManager
      * @codeCoverageIgnore
      */
-    public function __construct(Kp $kpConfiguration, Checkout $kcoConfiguration, StoreManagerInterface $storeManager)
+    public function __construct(Checkout $kcoConfiguration, StoreManagerInterface $storeManager)
     {
-        $this->kpConfiguration = $kpConfiguration;
         $this->kcoConfiguration = $kcoConfiguration;
         $this->storeManager = $storeManager;
     }
@@ -65,14 +58,13 @@ class Config
     }
 
     /**
-     * Returns true if KP or KCO are enabled in the target store
+     * Returns true if KCO is enabled in the target store
      *
      * @param StoreInterface $store
      * @return bool
      */
     public function isAnyKlarnaProductEnabledForStore(StoreInterface $store): bool
     {
-        return $this->kpConfiguration->isEnabled($store) ||
-            $this->kcoConfiguration->isEnabled($store);
+        return $this->kcoConfiguration->isEnabled($store);
     }
 }

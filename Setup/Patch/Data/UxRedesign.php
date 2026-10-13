@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © Klarna Bank AB (publ)
+ * Copyright 2025 Kustom AB (Originally developed by Klarna Bank AB)
  *
  * For the full copyright and license information, please view the NOTICE
  * and LICENSE files that were distributed with this source code.
@@ -10,7 +10,6 @@ declare(strict_types=1);
 namespace Klarna\AdminSettings\Setup\Patch\Data;
 
 use Klarna\AdminSettings\Model\Update\UxRedesign\Api\Manager as ApiManager;
-use Klarna\AdminSettings\Model\Update\UxRedesign\Osm\Manager as OsmManager;
 use Klarna\AdminSettings\Model\Update\UxRedesign\General\Manager as GeneralManager;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
@@ -34,10 +33,6 @@ class UxRedesign implements DataPatchInterface
      */
     private ApiManager $apiManager;
     /**
-     * @var OsmManager
-     */
-    private OsmManager $osmManager;
-    /**
      * @var ModuleDataSetupInterface
      */
     private ModuleDataSetupInterface $moduleDataSetup;
@@ -49,7 +44,6 @@ class UxRedesign implements DataPatchInterface
     /**
      * @param StoreRepositoryInterface $storeRepository
      * @param ApiManager $apiManager
-     * @param OsmManager $osmManager
      * @param GeneralManager $generalManager
      * @param ModuleDataSetupInterface $moduleDataSetup
      * @codeCoverageIgnore
@@ -57,13 +51,11 @@ class UxRedesign implements DataPatchInterface
     public function __construct(
         StoreRepositoryInterface $storeRepository,
         ApiManager $apiManager,
-        OsmManager $osmManager,
         GeneralManager $generalManager,
         ModuleDataSetupInterface $moduleDataSetup
     ) {
         $this->storeRepository = $storeRepository;
         $this->apiManager = $apiManager;
-        $this->osmManager = $osmManager;
         $this->moduleDataSetup = $moduleDataSetup;
         $this->generalManager = $generalManager;
     }
@@ -113,13 +105,6 @@ class UxRedesign implements DataPatchInterface
                 $this->apiManager->updateUserName();
                 $this->apiManager->updatePassword();
                 $this->apiManager->updateClientIdentifier();
-
-                $this->osmManager->setScope($level);
-                $this->osmManager->setScopeCode($storeId);
-                $this->osmManager->prepareMappingData();
-
-                $this->osmManager->updateTheme();
-                $this->osmManager->updatePosition();
 
                 $this->generalManager->setScope($level);
                 $this->generalManager->setScopeCode($storeId);
